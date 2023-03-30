@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
-function PokemonCard({pokemon}) {
+function PokemonCard({pokemonList, pokemonIndex}) {
+  const pokemon = pokemonList[pokemonIndex];
   return (
     <div>
       <figure>

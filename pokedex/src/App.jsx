@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
@@ -33,12 +31,11 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  const pokemon = pokemonList[pokemonIndex];
 
   return (
     <div className="App">
-      <PokemonCard pokemon={pokemon} />
-      <NavBar pokemonIndex = {pokemonIndex} setPokemonIndex = {setPokemonIndex} />
+      <PokemonCard pokemonList={pokemonList} pokemonIndex={pokemonIndex}/>
+      <NavBar pokemonList={pokemonList} setPokemonIndex={setPokemonIndex}/>
       
     </div>
   );
